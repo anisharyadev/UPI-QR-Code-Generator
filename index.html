@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 UPI QR Generator by Anish Aryadev Biswal</p>
+                <p>&copy; <span id="current-year"></span> UPI QR Generator by Anish Aryadev Biswal</p>
                 
             </div>
         </footer>
@@ -76,5 +76,14 @@
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     
     <script src="/UPI-QR-Code-Generator/assets/js/script.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('show');
+        });
+        
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
