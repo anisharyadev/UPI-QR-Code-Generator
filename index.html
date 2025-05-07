@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>UPI QR Code Generator</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UPI QR Code Generator</h1>
+            <p class="subtitle">Create scannable QR codes for payments up to ₹100,000</p>
+        </header>
+        
+        <div class="content-wrapper">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="amount">Amount (₹)</label>
+                    <input type="number" id="amount" min="1" max="100000" placeholder="Enter amount (1-100000)" required>
+                    <span class="error" id="amount-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="upi-id">UPI ID</label>
+                    <input type="text" id="upi-id" placeholder="yourname@upi">
+                </div>
+                
+                <div class="form-group">
+                    <label for="note">Transaction Note (Optional)</label>
+                    <input type="text" id="note" placeholder="Payment for services">
+                </div>
+
+                <div class="important-note">
+                    <p>⚠️ Important: If you forgot to add your UPI ID and sent money to the generated QR code, please email us at <strong>me@aryadev.in</strong> with a screenshot of the transaction.</p>
+                </div>
+            </div>
+            
+            <div class="qr-container" id="qr-container">
+                <div class="qr-placeholder">
+                    <p>Enter amount to generate QR code</p>
+                </div>
+                <div id="qrcode"></div>
+                <button id="download-btn" disabled>Download QR Code</button>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="founder-info">
+                    <h3>About the Founder</h3>
+                    <div class="founder-details">
+                        <img src="/assets/img/Aryadev_logo.png" alt="Anish Aryadev Biswal" class="founder-avatar">
+                        <div>
+                            <p><strong>Anish Aryadev Biswal</strong></p>
+                            <p>Contact: me@aryadev.in</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="/upi-guide.html">UPI Payment Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 UPI QR Generator by Anish Aryadev Biswal</p>
+                
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="force-desktop.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
